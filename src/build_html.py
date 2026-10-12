@@ -170,7 +170,7 @@ def coins(rng):
         out.append(
             f'<div class="abs anim" style="left:{540-size//2}px;top:{640-size//2}px;width:{size}px;height:{size}px;'
             f"--dx:{dx:.0f}px;--dy:{dy:.0f}px;--r:{rng.randint(-540,540)}deg;--s:{rng.uniform(.8,1.2):.2f};"
-            f'animation:coinFly 1.1s cubic-bezier(.2,.7,.4,1) calc(var(--t-s2) + {delay:.2f}s) both">'
+            f'animation:coinFly 1.1s cubic-bezier(.2,.7,.4,1) calc(var(--t-price) + {delay - 0.45:.2f}s) both">'
             f'<svg viewBox="0 0 24 24" width="100%"><circle cx="12" cy="12" r="11" fill="#FFC800" stroke="#E5A800" stroke-width="1.5"/>'
             f'<circle cx="12" cy="12" r="7.5" fill="none" stroke="#FFE066" stroke-width="1.2"/>'
             f'<text x="12" y="16.2" text-anchor="middle" font-family="Baloo Da 2" font-weight="800" font-size="11" fill="#E5A800">৳</text></svg></div>'
@@ -215,6 +215,14 @@ def main():
         "--t-s3": tl["s3"],
         "--t-bubble": tl["bubble"],
         "--t-s4": tl["s4"],
+        "--t-heart": tl["heart"],
+        "--t-title": tl["title"],
+        "--t-break": tl["break"],
+        "--t-sub": tl["sub"],
+        "--t-sadduo": tl["sadduo"],
+        "--t-price": tl["price"],
+        "--t-year": tl["year"],
+        "--t-badge": tl["badge"],
     }
     for i, t in enumerate(tl["cards"]):
         timing[f"--t-c{i}"] = t

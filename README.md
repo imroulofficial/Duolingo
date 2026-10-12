@@ -4,7 +4,8 @@
 
 - [`STORYBOARD.md`](STORYBOARD.md) — scene-by-scene storyboard
 - [`VOICEOVER_SCRIPT.md`](VOICEOVER_SCRIPT.md) — timed Bangla/English VO script + ElevenLabs settings
-- `output/duolingo_premium_ad_no_vo.mp4` — video without voice-over (motion graphics + SFX + music)
+- `output/duolingo_premium_ad_final.mp4` — **final video with voice-over** (20.5 s)
+- `output/duolingo_premium_ad_no_vo.mp4` — earlier version without voice-over (19 s, original timing)
 
 ## How it's built (code)
 | File | What it does |

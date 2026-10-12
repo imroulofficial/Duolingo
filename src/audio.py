@@ -249,10 +249,10 @@ def sfx_track(tl):
     nope, s2, s3, s4 = tl["nope"], tl["s2"], tl["s3"], tl["s4"]
     # Scene 1 - hook
     add(whoosh(0.35, 400, 2500, 0.35), 0.0)
-    add(pop(700, 200), 0.2)
-    add(error_buzz(), 0.6)
-    add(slam(), 0.75)
-    add(whoosh(0.4, 200, 1500, 0.3), 0.95)
+    add(pop(700, 200), tl["heart"])
+    add(slam(), tl["title"])
+    add(error_buzz(), tl["break"])
+    add(whoosh(0.4, 200, 1500, 0.3), tl["sadduo"])
     add(riser(nope - 1.1), 1.1)
     # "আর না!"
     add(whoosh(0.5, 500, 5000, 0.6), nope - 0.1)
@@ -264,12 +264,12 @@ def sfx_track(tl):
     add(whoosh(0.5, 400, 4000, 0.55), s2 - 0.1)
     add(pop(), s2 + 0.2)
     add(pop(1000, 350), s2 + 0.3)
-    add(slam(0.85), s2 + 0.45)
+    add(slam(0.85), tl["price"])
     for k in range(5):
-        add(coin(), s2 + 0.5 + k * 0.09, 0.8 if k else 1.0)
-    add(pop(800, 300, amp=0.5), s2 + 0.9)
-    add(pop(1100, 400), s2 + 1.1)
-    add(sparkle(9, 0.9), s2 + 1.6)
+        add(coin(), tl["price"] + 0.05 + k * 0.09, 0.8 if k else 1.0)
+    add(pop(800, 300, amp=0.5), tl["year"])
+    add(pop(1100, 400), tl["badge"])
+    add(sparkle(9, 0.9), tl["badge"] + 0.5)
     # Scene 3 - features
     add(whoosh(0.5, 300, 3500, 0.55), s3 - 0.1)
     add(pop(), s3 + 0.1)

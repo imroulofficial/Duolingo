@@ -106,32 +106,32 @@ svg{display:block;overflow:visible}
   <div class="topbar anim" style="animation:slideDown .5s var(--bounce) .05s both">
     <div class="stat" style="color:#FF9600">{{ICON_FLAME}}<span>127</span></div>
     <div class="stat" style="color:#1CB0F6">{{ICON_GEM}}<span>500</span></div>
-    <div class="stat anim" style="color:var(--red);animation:shake .6s ease-out .55s both">
-      <span class="anim" style="display:block;animation:grey .2s linear .55s both">{{ICON_HEART}}</span><span>0</span>
+    <div class="stat anim" style="color:var(--red);animation:shake .6s ease-out var(--t-break) both">
+      <span class="anim" style="display:block;animation:grey .2s linear var(--t-break) both">{{ICON_HEART}}</span><span>0</span>
     </div>
   </div>
 
   <!-- broken heart -->
   <div class="abs" style="left:340px;top:300px;width:400px;height:400px">
-    <div class="anim" style="width:100%;height:100%;animation:popIn .55s var(--bounce) .2s both">
+    <div class="anim" style="width:100%;height:100%;animation:popIn .55s var(--bounce) var(--t-heart) both">
       <svg viewBox="0 0 24 24" width="400" height="400">
         <defs>
           <clipPath id="hl"><polygon points="-2,-2 12.4,-2 10.6,7 13.2,11 10.4,15 12,26 -2,26"/></clipPath>
           <clipPath id="hr"><polygon points="12.4,-2 26,-2 26,26 12,26 10.4,15 13.2,11 10.6,7"/></clipPath>
         </defs>
-        <g class="anim" style="transform-box:fill-box;transform-origin:100% 100%;animation:splitL .35s var(--bounce) .6s both">
+        <g class="anim" style="transform-box:fill-box;transform-origin:100% 100%;animation:splitL .35s var(--bounce) var(--t-break) both">
           <g clip-path="url(#hl)">{{HEART_PATH}}</g></g>
-        <g class="anim" style="transform-box:fill-box;transform-origin:0% 100%;animation:splitR .35s var(--bounce) .6s both">
+        <g class="anim" style="transform-box:fill-box;transform-origin:0% 100%;animation:splitR .35s var(--bounce) var(--t-break) both">
           <g clip-path="url(#hr)">{{HEART_PATH}}</g></g>
       </svg>
     </div>
   </div>
 
-  <div class="abs center-x bn anim" style="top:760px;font-size:190px;line-height:1.1;animation:slam .5s ease-out .75s both">হার্ট শেষ?</div>
-  <div class="abs center-x bn anim" style="top:1000px;font-size:68px;color:#B7C4CB;animation:fadeUp .4s ease-out 1.15s both">লেসন মাঝপথে আটকে গেছে?</div>
+  <div class="abs center-x bn anim" style="top:760px;font-size:190px;line-height:1.1;animation:slam .5s ease-out var(--t-title) both">হার্ট শেষ?</div>
+  <div class="abs center-x bn anim" style="top:1000px;font-size:68px;color:#B7C4CB;animation:fadeUp .4s ease-out var(--t-sub) both">লেসন মাঝপথে আটকে গেছে?</div>
 
-  <div class="abs anim" style="left:320px;top:1240px;width:440px;animation:slideUp .6s var(--bounce) .95s both">
-    <div class="anim" style="animation:sadBob 1.1s ease-in-out 1.5s infinite alternate">{{DUO_SAD}}</div>
+  <div class="abs anim" style="left:320px;top:1240px;width:440px;animation:slideUp .6s var(--bounce) var(--t-sadduo) both">
+    <div class="anim" style="animation:sadBob 1.1s ease-in-out calc(var(--t-sadduo) + .55s) infinite alternate">{{DUO_SAD}}</div>
   </div>
 </section>
 
@@ -166,13 +166,13 @@ svg{display:block;overflow:visible}
   </div>
   <div class="abs center-x bn anim" style="top:330px;font-size:120px;animation:popIn .4s var(--bounce) calc(var(--t-s2) + .3s) both">মাত্র</div>
   {{COINS}}
-  <div class="abs center-x bn title-3d anim" style="top:420px;font-size:360px;line-height:1.15;text-shadow:0 18px 0 var(--gdd);animation:slam .5s ease-out calc(var(--t-s2) + .45s) both">৳২৪৯</div>
-  <div class="abs center-x bn anim" style="top:880px;font-size:110px;animation:popIn .45s var(--bounce) calc(var(--t-s2) + .9s) both">১ বছরের</div>
-  <div class="abs center-x anim" style="top:1040px;animation:popIn .5s var(--bounce) calc(var(--t-s2) + 1.1s) both">
+  <div class="abs center-x bn title-3d anim" style="top:420px;font-size:360px;line-height:1.15;text-shadow:0 18px 0 var(--gdd);animation:slam .5s ease-out var(--t-price) both">৳২৪৯</div>
+  <div class="abs center-x bn anim" style="top:880px;font-size:110px;animation:popIn .45s var(--bounce) var(--t-year) both">১ বছরের</div>
+  <div class="abs center-x anim" style="top:1040px;animation:popIn .5s var(--bounce) var(--t-badge) both">
     <div style="display:inline-flex;align-items:center;gap:22px;background:#fff;border-radius:40px;padding:22px 40px 22px 44px;box-shadow:0 12px 0 var(--gdd);position:relative;overflow:hidden">
       <span style="font-size:92px;color:var(--g);letter-spacing:-2px">duolingo</span>
       <span style="font-size:56px;color:#fff;padding:8px 26px;border-radius:22px;background:linear-gradient(135deg,#FFC800,#FF9600);letter-spacing:2px">PREMIUM</span>
-      <div class="anim" style="position:absolute;top:0;left:0;width:140px;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);animation:shine .8s ease-in-out calc(var(--t-s2) + 1.6s) both"></div>
+      <div class="anim" style="position:absolute;top:0;left:0;width:140px;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);animation:shine .8s ease-in-out calc(var(--t-badge) + .5s) both"></div>
     </div>
   </div>
   <div class="duo-shadow" style="left:400px;width:280px;top:1860px"></div>
