@@ -1,14 +1,23 @@
 {
-  "name": "duolingo-premium-ad",
-  "version": "1.0.0",
-  "private": true,
-  "description": "9:16 motion-graphics ad for Duolingo Premium (1 year) - rendered with Chromium + FFmpeg",
+  "name": "duolingo-premium-lifetime-ad",
+  "version": "2.0.0",
+  "description": "9:16 motion-graphics Reels ad for Duolingo Premium Lifetime (৳199) - deterministic HTML timeline rendered with Chromium + FFmpeg",
   "scripts": {
     "build": "bash src/build.sh",
-    "final": "bash src/build.sh --vo assets/voiceover.mp3"
+    "final": "bash src/build.sh --vo assets/voiceover.mp3",
+    "preview": "FPS=30 bash src/build.sh"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imroulofficial/Duolingo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imroulofficial/Duolingo/issues"
+  },
+  "homepage": "https://github.com/imroulofficial/Duolingo#readme",
   "dependencies": {
     "@fontsource/baloo-da-2": "^5.3.0",
     "@fontsource/nunito": "^5.3.0"
-  }
+  },
+  "private": true
 }

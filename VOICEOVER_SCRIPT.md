@@ -1,61 +1,48 @@
-# ভয়েসওভার স্ক্রিপ্ট (ElevenLabs-এর জন্য)
+# Voice-over script — Duolingo Premium Lifetime (৳১৯৯)
 
-**টোন:** এনার্জেটিক, বন্ধুসুলভ, তরুণ — ফেসবুক রিলসের বিজ্ঞাপনের মতো। দ্রুত কিন্তু পরিষ্কার।
-**মোট দৈর্ঘ্য:** ১৮–১৯ সেকেন্ডের মধ্যে (ভিডিও ১৯.০ সেকেন্ড)।
+Generate this **externally** (ElevenLabs) as **one file**, then drop it in `assets/voiceover.mp3`
+and run `bash src/build.sh --vo assets/voiceover.mp3`. The pipeline finds each line
+from the pauses and re-times every visual and sound effect to it.
 
-## টাইমিংসহ স্ক্রিপ্ট
+**Target:** the whole read in **15.5–18 s**. Leave a short, clear pause (~0.25 s) between lines,
+because the sync tool uses those pauses to tell the lines apart.
+**Tone:** energetic, friendly and confident, like a game commercial, not a lecture.
 
-| সময় | ভিজ্যুয়াল | ভয়েসওভার |
-|---|---|---|
-| 0:00 – 0:02.0 | হার্ট ভেঙে যায়, দুঃখী Duo | **হার্ট শেষ? লেসন আটকে গেছে?** |
-| 0:02.0 – 0:03.4 | "আর না!" স্ট্যাম্প | **আর না!** |
-| 0:03.4 – 0:05.8 | ৳২৪৯ + কয়েন | **মাত্র ২৪৯ টাকায়, পুরো এক বছরের Duolingo Premium!** |
-| 0:06.0 – 0:07.3 | কার্ড ১ | **Unlimited Hearts,** |
-| 0:07.3 – 0:08.6 | কার্ড ২ | **Unlimited Energy,** |
-| 0:08.6 – 0:10.0 | কার্ড ৩ | **একদম No Ads,** |
-| 0:10.0 – 0:11.8 | কার্ড ৪ | **Legendary সহ সব Lessons Unlocked,** |
-| 0:11.8 – 0:13.8 | কার্ড ৫ | **আর একবারের পেমেন্টেই পুরো এক বছর!** |
-| 0:13.8 – 0:19.0 | ORDER NOW বাটন | **আজই শুরু করুন — নিচের Order Now বাটনে ক্লিক করে এখনই অর্ডার করুন!** |
-
-## ElevenLabs-এ পেস্ট করার টেক্সট (এক টুকরোয়)
-
-একটাই ফাইল হিসেবে জেনারেট করুন — আমি পজ দেখে প্রতিটি লাইন সিনের সাথে মিলিয়ে দেব।
+## Paste into ElevenLabs (one block)
 
 ```
-হার্ট শেষ? লেসন আটকে গেছে?
-আর না!
-মাত্র ২৪৯ টাকায়, পুরো এক বছরের Duolingo Premium!
-Unlimited Hearts... Unlimited Energy... একদম No Ads...
-Legendary সহ সব Lessons Unlocked...
-আর একবারের পেমেন্টেই পুরো এক বছর!
-আজই শুরু করুন — নিচের Order Now বাটনে ক্লিক করে এখনই অর্ডার করুন!
+হার্ট শেষ? আবার শুরু থেকে?
+ফ্রি ভার্সনে ভুল করলেই হার্ট শেষ, তার উপর বিরক্তিকর Ads!
+কিন্তু এখন আছে Duolingo Premium!
+আনলিমিটেড হার্টস, আনলিমিটেড এনার্জি, কোনো Ads নেই, আর সব লেসন আনলকড!
+মাত্র ১৯৯ টাকায় লাইফটাইম অ্যাক্সেস!
+আজই অর্ডার করুন!
 ```
 
-## প্রস্তাবিত ElevenLabs সেটিংস
-- **Model:** Eleven v3 (বাংলায় সবচেয়ে ভালো ইমোশন) অথবা Eleven Multilingual v2
-- **Voice:** তরুণ, প্রাণবন্ত কণ্ঠ (পুরুষ বা নারী যেকোনোটি)
-- **Stability:** ~35–45% · **Similarity:** ~75% · **Style/Exaggeration:** ~30–40% · **Speed:** 1.05–1.1
-- v3 ব্যবহার করলে চাইলে ট্যাগ দিতে পারেন: `[sad]` হার্ট শেষ? … `[excited]` আর না! …
-- **আউটপুট:** MP3 44.1kHz/128kbps বা তার বেশি, অথবা WAV
+## Line → beat map (scratch timing used for the no-VO render)
 
-> ভয়েসটা ১৯ সেকেন্ডের বেশি হলে চিন্তা নেই — আমি `timeline.json` এডিট করে ভিডিওটাই ভয়েসের সাথে মিলিয়ে লম্বা/ছোট করে দেব (সর্বোচ্চ ~২০ সেকেন্ড রাখার চেষ্টা করব)।
+| # | id | Line | Scratch start | What's on screen |
+|---|---|---|---|---|
+| 1 | hook | হার্ট শেষ? আবার শুরু থেকে? | 0.10 | Heart counter hits 0, giant heart cracks, progress bar drains |
+| 2 | free | ফ্রি ভার্সনে ভুল করলেই হার্ট শেষ, | 2.05 | Hearts go grey one by one, energy drains 25 → 0 |
+| 3 | ads | তার উপর বিরক্তিকর Ads! | 3.35 | Three ad pop-ups slam in, screen shakes |
+| 4 | premium | কিন্তু এখন আছে Duolingo Premium! | 5.05 | GET PREMIUM press → green flood → logo + PREMIUM badge, 0 → ∞ |
+| 5 | hearts | আনলিমিটেড হার্টস, | 8.00 | Feature 1/4: ∞ heart |
+| 6 | energy | আনলিমিটেড এনার্জি, | 9.00 | Feature 2/4: energy ring refills |
+| 7 | noads | কোনো Ads নেই, | 10.00 | Feature 3/4: AD stamped out of the phone |
+| 8 | lessons | আর সব লেসন আনলকড! | 10.95 | Feature 4/4: lesson nodes unlock + confetti |
+| 9 | offer | মাত্র ১৯৯ টাকায় লাইফটাইম অ্যাক্সেস! | 12.30 | ৳১,৯৯০ struck → **৳১৯৯** slam, ৯০% ছাড় stamp, ONE-TIME / LIFETIME pills |
+| 10 | cta | আজই অর্ডার করুন! | 15.30 | CTA card, ORDER NOW pressed twice, URL, owl thumbs-up |
 
----
+The ad ends **VO end + 0.9 s** (minimum 2.6 s on the CTA).
 
-## ফাইনাল সিঙ্ক (দেওয়া ভয়েসওভার: Debashish – Warm Proud, 21.24s)
-ভয়েস ৫% দ্রুত করা হয়েছে (`atempo=1.05`, পিচ অপরিবর্তিত) যাতে ভিডিও ~২০ সেকেন্ডে থাকে। প্রতিটি লাইনের শুরুর সময় পজ-ডিটেকশন থেকে নেওয়া, আর ভিজ্যুয়াল সেই অনুযায়ী `src/timeline.json`-এ সেট করা।
+## Suggested ElevenLabs settings
+- **Model:** Eleven v3 (best Bangla emotion), or Multilingual v2
+- **Voice:** young and lively, male or female
+- **Stability** ~35–45 % · **Similarity** ~75 % · **Style** ~30–40 % · **Speed** 1.05–1.1
+- v3 tags if wanted: `[frustrated] হার্ট শেষ? …` `[excited] কিন্তু এখন আছে …`
+- **Output:** WAV, or MP3 at 44.1 kHz / 128 kbps or higher
 
-| লাইন | VO ফাইলে | ভিডিওতে (÷1.05) | ভিজ্যুয়াল ইভেন্ট |
-|---|---|---|---|
-| হার্ট শেষ? | 0.24 | 0.23 | টাইটেল স্ল্যাম 0.20, হার্ট ভাঙে 0.45 |
-| লেসন আটকে গেছে? | 1.77 | 1.69 | সাবটাইটেল 1.55 |
-| আর না! | 3.28 | 3.12 | সবুজ ওয়াইপ 2.85, "আর না!" স্ল্যাম 3.15 |
-| মাত্র ২৪৯ টাকায় | 4.40 | 4.19 | অফার সিন 3.85, "মাত্র" 4.15, ৳২৪৯ + কয়েন 4.30 |
-| পুরো এক বছরের Duolingo Premium | 6.47 | 6.16 | "১ বছরের" 6.10, PREMIUM ব্যাজ 6.75 |
-| Unlimited Hearts | 8.96 | 8.53 | ফিচার সিন 8.00, কার্ড ১ 8.45 |
-| Unlimited Energy | 9.89 | 9.42 | কার্ড ২ 9.35 |
-| একদম No Ads | 10.94 | 10.42 | কার্ড ৩ 10.35 |
-| Legendary সহ সব Lessons Unlocked | 12.30 | 11.71 | কার্ড ৪ 11.65 |
-| আর একবারের পেমেন্টেই পুরো এক বছর | 14.61 | 13.91 | কার্ড ৫ 13.85, বাবল 15.30 |
-| আজই শুরু করুন | 17.19 | 16.37 | CTA সিন 16.00, টাইটেল 16.45 |
-| নিচের Order Now বাটনে… | 18.26 → 20.95 | 17.39 → 19.95 | বাটন 17.25, ট্যাপ 18.30 ও 19.70 |
+If the read runs past ~19 s, `sync_vo.py` speeds it up automatically (pitch kept, max 1.12×)
+so the ad stays at 20 s or less. If a pause is too short for the line detection, pass the
+10 start times by hand: `bash src/build.sh --vo assets/voiceover.mp3 --manual 0.1,2.0,...`

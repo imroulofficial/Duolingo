@@ -1,24 +1,23 @@
 {
-  "fps": 30,
+  "fps": 60,
   "width": 1080,
   "height": 1920,
-  "duration": 20.5,
-  "vo": {"tempo": 1.05, "offset": 0.0},
+  "scale": 3,
+  "cta_hold": 0.9,
 
-  "heart": 0.05,
-  "title": 0.2,
-  "break": 0.45,
-  "sadduo": 0.95,
-  "sub": 1.55,
-  "nope": 2.85,
+  "_comment": "Each VO line is an anchor. 'start' / 'end' are the scratch-track defaults used when no voice-over is supplied; src/sync_vo.py overwrites them (into dist/vo_sync.json) from the real audio. Every visual beat and SFX in src/cues.py is defined relative to these anchors.",
 
-  "s2": 3.85,
-  "price": 4.3,
-  "year": 6.1,
-  "badge": 6.75,
-
-  "s3": 8.0,
-  "cards": [8.45, 9.35, 10.35, 11.65, 13.85],
-  "bubble": 15.3,
-  "s4": 16.0
+  "lines": [
+    { "id": "hook",     "text": "হার্ট শেষ? আবার শুরু থেকে?",            "start": 0.10,  "end": 1.75 },
+    { "id": "free",     "text": "ফ্রি ভার্সনে ভুল করলেই হার্ট শেষ,",       "start": 2.05,  "end": 3.20 },
+    { "id": "ads",      "text": "তার উপর বিরক্তিকর Ads!",                 "start": 3.35,  "end": 4.45 },
+    { "id": "premium",  "text": "কিন্তু এখন আছে Duolingo Premium!",       "start": 5.05,  "end": 6.90 },
+    { "id": "hearts",   "text": "আনলিমিটেড হার্টস,",                     "start": 8.00,  "end": 8.80 },
+    { "id": "energy",   "text": "আনলিমিটেড এনার্জি,",                    "start": 9.00,  "end": 9.80 },
+    { "id": "noads",    "text": "কোনো Ads নেই,",                          "start": 10.00, "end": 10.70 },
+    { "id": "lessons",  "text": "আর সব লেসন আনলকড!",                      "start": 10.95, "end": 11.90 },
+    { "id": "offer",    "text": "মাত্র ১৯৯ টাকায় লাইফটাইম অ্যাক্সেস!",     "start": 12.30, "end": 14.60 },
+    { "id": "cta",      "text": "আজই অর্ডার করুন!",                       "start": 15.30, "end": 16.40 }
+  ],
+  "cta_min_hold": 2.6
 }
