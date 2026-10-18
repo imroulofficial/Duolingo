@@ -30,10 +30,11 @@ ffmpeg -y -loglevel error -i dist/video.mp4 -i dist/music.wav -i dist/sfx.wav -f
   -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -ar 48000 -t "$DUR" -movflags +faststart out/final_no_vo.mp4
 
 if [[ -n "$VO" ]]; then
-  read -r TEMPO OFFSET < <(python3 -c "import json;s=json.load(open('dist/vo_sync.json'));print(s['tempo'],s['offset'])")
+  # sync_vo.py writes the pause-tightened read to dist/vo_tight.wav; mix that
+  read -r TEMPO OFFSET VOFILE < <(python3 -c "import json;s=json.load(open('dist/vo_sync.json'));print(s['tempo'],s['offset'],s['file'])")
   DELAY_MS=$(python3 -c "print(int(float('$OFFSET')*1000))")
   # VO cleaned + compressed; music ducks under it (sidechain); SFX tucked a little lower
-  ffmpeg -y -loglevel error -i dist/video.mp4 -i dist/music.wav -i dist/sfx.wav -i "$VO" -filter_complex \
+  ffmpeg -y -loglevel error -i dist/video.mp4 -i dist/music.wav -i dist/sfx.wav -i "$VOFILE" -filter_complex \
     "[3:a]aresample=48000,atempo=${TEMPO},aformat=channel_layouts=stereo,highpass=f=80,acompressor=threshold=-18dB:ratio=3:attack=5:release=120,adelay=${DELAY_MS}|${DELAY_MS},volume=1.7,asplit=2[vo][key]; \
      [1:a]volume=0.45[m];[m][key]sidechaincompress=threshold=0.03:ratio=8:attack=15:release=300[md]; \
      [2:a]volume=0.6[s]; \

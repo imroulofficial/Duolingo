@@ -370,8 +370,8 @@ def sfx_track(c, total):
     add(sparkle(10, 0.9, 0.24, 1), c["s3"] + 0.05)
     add(chirp(0.38), c["s3"] + 0.3)
     add(pop(900, 300, amp=0.5), c["logo"])
-    add(pop(1300, 500, amp=0.45), c["logo"] + 0.22)
-    add(sparkle(5, 0.4, 0.16, 2), c["logo"] + 0.7)
+    add(pop(1300, 500, amp=0.45), c["badge"])
+    add(sparkle(5, 0.4, 0.16, 2), c["badge"] + 0.45)
     for i, r in enumerate(c["rows"]):
         hit = r + (0.32 if i == 1 else 0.05)
         if i == 1:

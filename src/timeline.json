@@ -3,12 +3,12 @@
   "width": 1080,
   "height": 1920,
   "scale": 3,
-  "cta_hold": 0.9,
+  "cta_hold": 1.0,
 
   "_comment": "Each VO line is an anchor. 'start' / 'end' are the scratch-track defaults used when no voice-over is supplied; src/sync_vo.py overwrites them (into dist/vo_sync.json) from the real audio. Every visual beat and SFX in src/cues.py is defined relative to these anchors.",
 
   "lines": [
-    { "id": "hook",     "text": "হার্ট শেষ? আবার শুরু থেকে?",            "start": 0.10,  "end": 1.75 },
+    { "id": "hook",     "text": "হার্ট শেষ? আবার শুরু থেকে?",            "start": 0.10,  "end": 1.75, "parts": [0.95] },
     { "id": "free",     "text": "ফ্রি ভার্সনে ভুল করলেই হার্ট শেষ,",       "start": 2.05,  "end": 3.20 },
     { "id": "ads",      "text": "তার উপর বিরক্তিকর Ads!",                 "start": 3.35,  "end": 4.45 },
     { "id": "premium",  "text": "কিন্তু এখন আছে Duolingo Premium!",       "start": 5.05,  "end": 6.90 },
@@ -19,5 +19,5 @@
     { "id": "offer",    "text": "মাত্র ১৯৯ টাকায় লাইফটাইম অ্যাক্সেস!",     "start": 12.30, "end": 14.60 },
     { "id": "cta",      "text": "আজই অর্ডার করুন!",                       "start": 15.30, "end": 16.40 }
   ],
-  "cta_min_hold": 2.6
+  "cta_min_hold": 2.5
 }

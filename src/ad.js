@@ -295,8 +295,8 @@ function scene3(t) {
   P($('s3rays'), { x: 180, y: 300, r: t * 14, s: sp(t, C.flood, .3, 1, 1.5, .7) });
   P($('s3t1'), { x: 180, y: 142, s: popS(t, C.flood + .12, .5), o: popO(t, C.flood + .12) });
   P($('s3logo'), { x: 180, y: 200, s: t < C.logo ? 0 : sp(t, C.logo, .25, 1, 2.6, .4), sx: 1 + .1 * Math.sin(Math.max(0, t - C.logo) * 16) * Math.exp(-(t - C.logo) * 6), o: popO(t, C.logo) });
-  P($('s3badge'), { x: 180, y: 252, s: t < C.logo + .22 ? 0 : sp(t, C.logo + .22, .2, 1, 2.8, .38), r: lerp(-8, 0, spring(t - C.logo - .22, 2.8, .38)) });
-  P($('s3shine'), { x: lerp(-40, 190, eIO(prog(t, C.logo + .7, .55))), y: 0, ax: 0, ay: 0 });
+  P($('s3badge'), { x: 180, y: 252, s: t < C.badge ? 0 : sp(t, C.badge, .2, 1, 2.8, .38), r: lerp(-8, 0, spring(t - C.badge, 2.8, .38)) });
+  P($('s3shine'), { x: lerp(-40, 190, eIO(prog(t, C.badge + .45, .55))), y: 0, ax: 0, ay: 0 });
 
   // happy owl jumps in, winks
   const jt = Math.max(0, t - C.s3 - .25);
