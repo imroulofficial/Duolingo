@@ -23,7 +23,8 @@ def main():
     env = dict(os.environ, NODE_PATH=os.environ.get("NODE_PATH", "/opt/node22/lib/node_modules:/opt/node-tools/node_modules"))
 
     # poster: the offer beat (price + 90% stamp + lifetime pills all on screen)
-    tp = round(c["pills"] + 0.7, 2)
+    # (fully built, and safely before the offer -> CTA morph starts at s6 - 0.36)
+    tp = round(min(c["pills"] + 0.7, c["s6"] - 0.45), 2)
     subprocess.run(["node", str(ROOT / "src" / "render.js"), "stills", str(DIST / "poster"), str(tp)], check=True, env=env)
     Image.open(next((DIST / "poster").glob("*.png"))).convert("RGB").save(OUT / "poster.png", optimize=True)
 
