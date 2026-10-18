@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<title>Duolingo Premium Lifetime — listing images</title>
+<link rel="stylesheet" href="kit.css">
+<style>
+/* 1:1 product-listing images, laid out at 360x360 CSS px and captured at 3x (1080x1080).
+   Open listing.html#thumb | #g1 | #g2 to see one. */
+html,body{width:360px;height:360px;overflow:hidden;background:#fff}
+.img{position:relative;width:360px;height:360px;overflow:hidden;display:none;
+  font-family:'Nunito','Baloo Da 2',sans-serif;font-weight:800;color:var(--eel);
+  -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.img.on{display:block}
+.abs{position:absolute}
+.wordmark{font-family:'Nunito';font-weight:900;letter-spacing:-.02em;line-height:1}
+.premium{background:var(--bee);color:var(--eel);border-bottom:4px solid var(--bee-d);border-radius:12px;
+  font-family:'Nunito';font-weight:900;letter-spacing:.14em;white-space:nowrap}
+.price{font-family:'Baloo Da 2';font-weight:800;line-height:1;color:var(--feather);text-shadow:0 4px 0 var(--tree);white-space:nowrap}
+.old{font-family:'Baloo Da 2';font-weight:800;color:var(--hare);white-space:nowrap;position:relative;line-height:1}
+.old::after{content:'';position:absolute;left:-3px;right:-3px;top:46%;height:2px;border-radius:2px;background:var(--cardinal);transform:rotate(-3deg)}
+.stamp{border-radius:50%;background:var(--cardinal);color:#fff;box-shadow:0 4px 0 var(--cardinal-d);flex-direction:column}
+.stamp::before{content:'';position:absolute;inset:5px;border-radius:50%;border:2px dashed rgba(255,255,255,.75)}
+.tile{border-radius:12px;flex:none}
+.rays{border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.09) 0deg 11deg,rgba(255,255,255,0) 11deg 22.5deg)}
+
+/* ---- thumbnail ---- */
+#thumb{background:var(--feather)}
+.feat-strip{left:16px;right:16px;bottom:16px;height:54px;justify-content:space-around;padding:0 6px}
+.feat-strip .f{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;white-space:nowrap}
+
+/* ---- gallery 1 ---- */
+#g1{background:var(--polar)}
+.fcard{position:absolute;width:160px;height:104px;padding:12px 12px 0}
+.fcard .t{font-size:17px;margin-top:9px;white-space:nowrap}
+.fcard .s{font-family:'Nunito';font-weight:900;font-size:9.5px;letter-spacing:.08em;color:var(--hare);margin-top:1px;white-space:nowrap}
+.fcard .ck{position:absolute;right:10px;top:10px;width:24px;height:24px}
+
+/* ---- gallery 2 ---- */
+#g2{background:var(--polar)}
+.tbl{left:16px;right:16px;top:64px;height:196px}
+.tr{position:absolute;left:0;right:0;height:38px;display:flex;align-items:center}
+.tr .k{width:100px;padding-left:14px;display:flex;align-items:center;gap:7px;font-size:15px;white-space:nowrap}
+.tr .c{width:96px;display:flex;align-items:center;justify-content:center;gap:5px;font-size:14px;white-space:nowrap}
+.tr .p{width:128px;display:flex;align-items:center;justify-content:center;gap:5px;font-size:14px;white-space:nowrap;color:var(--tree)}
+.sep{position:absolute;left:12px;right:12px;height:2px;background:var(--swan)}
+</style>
+</head>
+<body>
+
+<!-- ========== THUMBNAIL ========== -->
+<section class="img" id="thumb">
+  <div class="abs rays" style="width:620px;height:620px;left:-210px;top:-130px"></div>
+  <div class="abs wordmark" style="left:0;right:0;top:22px;text-align:center;color:#fff;font-size:50px">duolingo</div>
+  <div class="abs cc" style="left:0;right:0;top:78px"><div class="premium" style="font-size:18px;padding:6px 18px 3px">PREMIUM</div></div>
+  <div class="abs" id="t-owl" style="left:2px;top:122px;width:156px"></div>
+  <div class="abs card" style="left:160px;top:128px;width:184px;height:150px;border:0;border-bottom:5px solid var(--tree);padding:14px 0 0">
+    <div style="padding-left:16px"><div class="chip row" style="background:var(--bee);color:var(--eel);border-bottom:3px solid var(--bee-d);font-size:12px;gap:5px;padding:4px 11px 3px;width:max-content"><i data-ico="infE" style="width:22px;height:11px"></i>LIFETIME</div></div>
+    <div class="cc" style="margin-top:10px"><div class="old" style="font-size:20px">৳১,৯৯০</div></div>
+    <div class="cc" style="margin-top:2px"><div class="price" style="font-size:62px">৳১৯৯</div></div>
+  </div>
+  <div class="abs cc stamp" style="left:292px;top:92px;width:64px;height:64px;transform:rotate(-14deg)"><div style="font-family:Nunito;font-weight:900;font-size:19px;line-height:1">৯০%</div><div class="bn" style="font-size:13px;line-height:1">ছাড়</div></div>
+  <div class="abs card row feat-strip" style="border:0;border-bottom:4px solid var(--tree)">
+    <div class="f"><i data-ico="heart" style="width:22px;height:21px"></i><span class="row bn" style="gap:3px"><i data-ico="infE" style="width:16px;height:8px"></i>হার্টস</span></div>
+    <div class="f"><i data-ico="bolt" style="width:22px;height:22px"></i><span class="row bn" style="gap:3px"><i data-ico="infE" style="width:16px;height:8px"></i>এনার্জি</span></div>
+    <div class="f"><i data-ico="noad" style="width:22px;height:22px"></i><span class="bn">নো Ads</span></div>
+    <div class="f"><i data-ico="unlock" style="width:22px;height:22px"></i><span class="bn">সব লেসন</span></div>
+  </div>
+</section>
+
+<!-- ========== GALLERY 1: what's included ========== -->
+<section class="img" id="g1">
+  <div class="abs row" style="left:0;right:0;top:18px;justify-content:center;gap:8px">
+    <div class="wordmark" style="color:var(--feather);font-size:26px">duolingo</div>
+    <div class="premium" style="font-size:12px;padding:4px 10px 2px;border-bottom-width:3px;border-radius:9px">PREMIUM</div>
+  </div>
+  <div class="abs bn" style="left:0;right:0;top:54px;text-align:center;font-size:27px;white-space:nowrap">প্রিমিয়ামে যা যা পাচ্ছেন</div>
+  <div class="abs card fcard" style="left:16px;top:98px">
+    <div class="tile cc" style="width:46px;height:46px;background:#FFDFE0;position:relative"><i data-ico="heart" style="width:30px;height:28px"></i><i data-ico="infW" class="abs" style="left:11px;top:15px;width:24px;height:12px"></i></div>
+    <div class="t bn">আনলিমিটেড হার্টস</div><div class="s">UNLIMITED HEARTS</div><i data-ico="check" class="ck"></i>
+  </div>
+  <div class="abs card fcard" style="left:184px;top:98px">
+    <div class="tile cc" style="width:46px;height:46px;background:#FFF0D5"><i data-ico="bolt" style="width:30px;height:30px"></i></div>
+    <div class="t bn">আনলিমিটেড এনার্জি</div><div class="s">UNLIMITED ENERGY</div><i data-ico="check" class="ck"></i>
+  </div>
+  <div class="abs card fcard" style="left:16px;top:210px">
+    <div class="tile cc" style="width:46px;height:46px;background:#DDF4FF"><i data-ico="noad" style="width:32px;height:32px"></i></div>
+    <div class="t bn">কোনো Ads নেই</div><div class="s">NO ADS</div><i data-ico="check" class="ck"></i>
+  </div>
+  <div class="abs card fcard" style="left:184px;top:210px">
+    <div class="tile cc" style="width:46px;height:46px;background:var(--pale)"><i data-ico="unlock" style="width:30px;height:30px"></i></div>
+    <div class="t bn">সব লেসন আনলকড</div><div class="s">ALL LESSONS UNLOCKED</div><i data-ico="check" class="ck"></i>
+  </div>
+  <div class="abs btn" style="left:16px;right:16px;top:318px;height:30px;font-size:12.5px;border-radius:12px;gap:7px">
+    <i data-ico="infW" style="width:22px;height:11px"></i>ONE-TIME PAYMENT · LIFETIME ACCESS
+  </div>
+</section>
+
+<!-- ========== GALLERY 2: free vs premium ========== -->
+<section class="img" id="g2">
+  <div class="abs bn" style="left:0;right:0;top:14px;text-align:center;font-size:27px;white-space:nowrap">ফ্রি <span style="color:var(--hare)">vs</span> <span style="color:var(--feather)">প্রিমিয়াম</span></div>
+  <div class="abs card tbl">
+    <!-- premium column highlight -->
+    <div class="abs" style="right:6px;top:6px;bottom:6px;width:126px;border-radius:12px;background:var(--pale);border:2px solid var(--feather)"></div>
+    <div class="tr" style="top:2px;height:34px">
+      <div class="k"></div>
+      <div class="c"><div class="chip" style="background:var(--swan);color:var(--wolf);font-size:11px">FREE</div></div>
+      <div class="p"><div class="chip row" style="background:var(--bee);color:var(--eel);font-size:11px;gap:4px;padding:4px 9px 3px"><i data-ico="crown" style="width:14px;height:14px"></i>PREMIUM</div></div>
+    </div>
+    <div class="tr" style="top:38px"><div class="k bn"><i data-ico="heart" style="width:18px;height:17px"></i>হার্টস</div><div class="c bn" style="color:var(--wolf)">মাত্র ৫টি</div><div class="p"><i data-ico="inf" style="width:34px;height:17px"></i></div></div>
+    <div class="sep" style="top:76px;right:138px"></div>
+    <div class="tr" style="top:76px"><div class="k bn"><i data-ico="bolt" style="width:18px;height:18px"></i>এনার্জি</div><div class="c bn" style="color:var(--wolf)">শেষ হয়ে যায়</div><div class="p"><i data-ico="infO" style="width:34px;height:17px"></i></div></div>
+    <div class="sep" style="top:114px;right:138px"></div>
+    <div class="tr" style="top:114px"><div class="k bn"><i data-ico="ad" style="width:20px;height:20px"></i>Ads</div><div class="c bn" style="color:var(--cardinal)"><i data-ico="xr" style="width:16px;height:16px"></i>আছে</div><div class="p bn"><i data-ico="check" style="width:18px;height:18px"></i>নেই</div></div>
+    <div class="sep" style="top:152px;right:138px"></div>
+    <div class="tr" style="top:152px"><div class="k bn"><i data-ico="lock" style="width:18px;height:18px"></i>লেসন</div><div class="c bn" style="color:var(--wolf)">সীমিত</div><div class="p bn"><i data-ico="check" style="width:18px;height:18px"></i>সব আনলকড</div></div>
+  </div>
+  <div class="abs card" style="left:16px;right:16px;top:272px;height:76px;border:0;border-bottom:5px solid var(--tree);background:#fff">
+    <div class="abs" style="left:16px;top:12px">
+      <div class="row" style="gap:7px"><div class="old" style="font-size:17px">৳১,৯৯০</div><div class="chip" style="background:var(--cardinal);color:#fff;font-size:10.5px;padding:3px 8px 2px">-90%</div></div>
+      <div class="price" style="font-size:36px;margin-top:4px">৳১৯৯</div>
+    </div>
+    <div class="abs" style="left:158px;top:13px">
+      <div class="chip row" style="background:var(--bee);color:var(--eel);border-bottom:3px solid var(--bee-d);font-size:10.5px;gap:4px;padding:3px 9px 2px;width:max-content"><i data-ico="infE" style="width:18px;height:9px"></i>LIFETIME ACCESS</div>
+      <div class="bn" style="font-size:14px;margin-top:6px;color:var(--wolf);white-space:nowrap">একবার পেমেন্ট,<br>সারাজীবন প্রিমিয়াম</div>
+    </div>
+  </div>
+</section>
+
+<script src="kit.js"></script>
+<script>
+(() => {
+  const { ICONS, fillIcons, owlSVG, owlPose } = window.KIT;
+  ICONS.xr = '<svg viewBox="0 0 24 24" width="100%" height="100%"><circle cx="12" cy="12" r="11" fill="#FF4B4B"/><path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/></svg>';
+  fillIcons();
+  document.getElementById('t-owl').innerHTML = owlSVG('owT', { thumb: true, outline: 6 });
+  owlPose('owT', { joy: [0, 1], cheeks: true, look: [3, -2], wl: -8 });
+  window.show = (id) => document.querySelectorAll('.img').forEach((s) => s.classList.toggle('on', s.id === id));
+  window.show((location.hash || '#thumb').slice(1));
+})();
+</script>
+</body>
+</html>

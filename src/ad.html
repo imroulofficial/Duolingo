@@ -3,44 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Duolingo Premium Lifetime — 9:16 ad</title>
+<link rel="stylesheet" href="kit.css">
 <style>
-@font-face{font-family:'Nunito';font-weight:700;src:url(../node_modules/@fontsource/nunito/files/nunito-latin-700-normal.woff2)}
-@font-face{font-family:'Nunito';font-weight:800;src:url(../node_modules/@fontsource/nunito/files/nunito-latin-800-normal.woff2)}
-@font-face{font-family:'Nunito';font-weight:900;src:url(../node_modules/@fontsource/nunito/files/nunito-latin-900-normal.woff2)}
-@font-face{font-family:'Baloo Da 2';font-weight:700;src:url(../node_modules/@fontsource/baloo-da-2/files/baloo-da-2-bengali-700-normal.woff2)}
-@font-face{font-family:'Baloo Da 2';font-weight:800;src:url(../node_modules/@fontsource/baloo-da-2/files/baloo-da-2-bengali-800-normal.woff2)}
-
-:root{
-  --feather:#58CC02; --tree:#58A700; --eel:#4B4B4B; --macaw:#1CB0F6; --macaw-d:#1899D6;
-  --cardinal:#FF4B4B; --cardinal-d:#EA2B2B; --fox:#FF9600; --bee:#FFC800; --bee-d:#E5A800;
-  --pale:#DBF8C5; --snow:#FFFFFF; --polar:#F7F7F7; --swan:#E5E5E5; --hare:#AFAFAF; --wolf:#777777;
-  --beetle:#CE82FF; --mask-g:#89E219;
-}
-*{box-sizing:border-box;margin:0;padding:0}
 html,body{width:360px;height:640px;overflow:hidden;background:var(--snow)}
 #stage{position:relative;width:360px;height:640px;overflow:hidden;
   font-family:'Nunito','Baloo Da 2',sans-serif;font-weight:800;color:var(--eel);
   -webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .scene{position:absolute;left:0;top:0;width:360px;height:640px;overflow:hidden;display:none}
-.a{position:absolute;left:0;top:0;will-change:transform}
 .full{position:absolute;left:0;top:0;width:360px;height:640px}
-.row{display:flex;align-items:center}
-.cc{display:flex;align-items:center;justify-content:center}
-.bn{font-family:'Baloo Da 2','Nunito',sans-serif;font-weight:800;line-height:1.08}
-svg{display:block;overflow:visible}
-
-/* ---------- Duolingo-style components ---------- */
-.pill{border-radius:9999px}
-.bar{height:16px;border-radius:9999px;background:var(--swan);overflow:hidden;position:relative}
-.bar>i{position:absolute;left:0;top:0;bottom:0;border-radius:9999px;background:var(--feather)}
-.bar>i::after{content:'';position:absolute;left:8px;right:8px;top:4px;height:4px;border-radius:9999px;background:rgba(255,255,255,.32)}
-.card{background:var(--snow);border:2px solid var(--swan);border-bottom-width:4px;border-radius:16px}
-.btn{border-radius:12px;background:var(--feather);border-bottom:4px solid var(--tree);color:#fff;
-  font-family:'Nunito','Baloo Da 2';font-weight:900;text-transform:uppercase;letter-spacing:.06em;
-  display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
-.chip{border-radius:9999px;padding:5px 12px;font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.stat{display:flex;align-items:center;gap:4px;font-weight:900;font-size:15px}
-.stat svg{width:22px;height:22px}
 
 /* ---------- scene 1 : hook ---------- */
 #s1{background:var(--snow)}
@@ -262,6 +232,7 @@ svg{display:block;overflow:visible}
 
 </div>
 <script src="../dist/cues.js"></script>
+<script src="kit.js"></script>
 <script src="ad.js"></script>
 </body>
 </html>

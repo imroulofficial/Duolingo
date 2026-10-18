@@ -16,6 +16,13 @@ Every element is an original vector drawn for this ad, including the owl mascot.
 - `poster.png`: 1080×1920 thumbnail on the offer beat (৳১৯৯, ৯০% ছাড়, LIFETIME).
 - `contact_sheet.png`: 24 frames from the encode, with the top and bottom 15 % Reels safe zones marked.
 
+### Product-listing images (ElectronicBD), 1080×1080
+- `thumbnail_1x1.png`: green hero with the thumbs-up owl, duolingo PREMIUM, a ∞ LIFETIME price card (৳১,৯৯০ struck → **৳১৯৯**), the ৯০% ছাড় stamp and a 4-feature strip.
+- `gallery_1x1_1.png`: "প্রিমিয়ামে যা যা পাচ্ছেন", a 2×2 grid of feature cards (Unlimited Hearts and Energy, No Ads, All Lessons Unlocked) and a one-time payment / lifetime access bar.
+- `gallery_1x1_2.png`: a Free vs Premium comparison (hearts, energy, ads, lessons) with a price strip.
+
+Rebuild with `node src/render_listing.js`. The images come from `src/listing.html`, laid out at 360×360 and captured at 3×. They share `src/kit.css` and `src/kit.js` (tokens, components, icons, owl) with the video, so both stay in one design system.
+
 ## Storyboard
 
 | Time* | Scene | Motion | SFX / music |
