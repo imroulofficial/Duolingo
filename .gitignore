@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.wav
 !assets/*.wav
+__pycache__/
